@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+  build:
+    commands:
+      - echo "Syncing GitHub folders..."
+      - node sync-github.js
+      
+artifacts:
+  files:
+    - pattern_list.json
